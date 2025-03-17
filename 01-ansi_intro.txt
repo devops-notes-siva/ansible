@@ -1,0 +1,11 @@
+ansible is developed from python and it is push based, recently it also acts like pull based.
+
+
+In ansible while installing packages ," package "module is used for heterogenous, but in complanies user similar platform across all applications so better to use "dnf" module for rhel servers.
+
+
+ansible-commands:
+======================
+$ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 <playbok-name>
+$ansible -i inventory.ini web --list-hosts
+$ansible -i inventory.ini all --list-hosts
