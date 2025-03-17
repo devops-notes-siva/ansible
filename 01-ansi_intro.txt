@@ -1,3 +1,6 @@
+git add . ;git commit -m "some msg" ;git push -u origin main
+
+
 ansible is developed from python and it is push based, recently it also acts like pull based.
 
 
