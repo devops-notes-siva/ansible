@@ -1,0 +1,20 @@
+- name: variables
+  hosts: localhost
+  become: yes
+  vars:
+    name: Siva Kumar
+    work: soft
+    learning: all
+  tasks:
+  - name: print information from play level
+    ansible.builtin.debug:
+      msg: "hi my name is {{name}} and i am working as {{work}} and also interested in {{learning}}"
+
+  - name: print information from task level
+    vars:
+      tools:
+       - ansible
+       - shell script
+      
+    ansible.builtin.debug:
+      msg: "i know topics like {{tools}}"

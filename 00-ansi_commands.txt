@@ -1,0 +1,13 @@
+ansible-commands:
+======================
+$ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 <playbok-name>
+$ansible -i inventory.ini web --list-hosts
+$ansible -i inventory.ini all --list-hosts
+
+$ansible -i 172.31.16.150, all -e ansible_user=ec2-user -e ansible_password=DevOps321 -m dnf -a "name=nginx state=installed"
+
+passing variables as arguments:
+--------------------------------
+$ anible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 <playbook-name> -e "PERSON=SIVA WISHES=great"
+	or
+$ anible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 <playbook-name> -e PERSON=SIVA -e WISHES=great
